@@ -7,7 +7,7 @@ overflow-x:hidden;
 transition:0.3s ease;
 }
 
-/* ================= NAVBAR FIX FINAL ================= */
+/* ================= NAVBAR (FIX TOTAL VISIBILITY) ================= */
 nav{
 position:fixed;
 top:0;
@@ -19,46 +19,30 @@ justify-content:space-between;
 align-items:center;
 padding:0 8%;
 background:rgba(255,255,255,0.98);
-backdrop-filter:blur(20px);
+backdrop-filter:blur(8px); /* dikurangi biar text tidak hilang */
 z-index:99999;
-border-bottom:1px solid rgba(0,0,0,0.12);
-box-shadow:0 6px 25px rgba(0,0,0,0.08);
+border-bottom:1px solid rgba(0,0,0,0.15);
+box-shadow:0 6px 20px rgba(0,0,0,0.08);
 }
 
-/* LOGO + LEFT AREA */
+/* LEFT AREA */
 .nav-left{
 display:flex;
 align-items:center;
 gap:12px;
-flex-shrink:0;
 }
 
 /* LOGO */
 .logo{
 font-family:'Playfair Display';
 font-size:16px;
-font-weight:700;
+font-weight:800;
 color:#111;
-white-space:nowrap;
 letter-spacing:1px;
+white-space:nowrap;
 }
 
-/* THEME BUTTON */
-.theme-btn{
-border:none;
-background:#111;
-color:#fff;
-padding:6px 10px;
-border-radius:8px;
-cursor:pointer;
-transition:0.3s;
-}
-
-.theme-btn:hover{
-transform:scale(1.08);
-}
-
-/* MENU NAVBAR */
+/* MENU */
 nav ul{
 display:flex;
 gap:28px;
@@ -72,12 +56,12 @@ nav li{
 white-space:nowrap;
 }
 
-/* LINK NAVBAR (FIX VISIBILITY TOTAL) */
+/* NAV LINK (FIX UTAMA TEXT HILANG) */
 nav a{
 text-decoration:none;
-color:#111;
+color:#111; /* 🔥 wajib gelap */
 font-size:14px;
-font-weight:600;
+font-weight:700; /* biar jelas */
 padding:6px 8px;
 border-radius:6px;
 transition:0.3s;
@@ -88,7 +72,6 @@ white-space:nowrap;
 /* hover */
 nav a:hover{
 background:rgba(0,0,0,0.06);
-opacity:1;
 }
 
 /* ================= HERO ================= */
@@ -257,7 +240,7 @@ color:#fff;
 transform:translateY(-4px) scale(1.05);
 }
 
-/* ================= PROJECT (FIX RAPI TOTAL) ================= */
+/* ================= PROJECT FIX TOTAL ================= */
 .projects{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
@@ -327,10 +310,8 @@ box-shadow:0 20px 40px rgba(0,0,0,0.1);
 
 /* CLICK EFFECT */
 .contact-card:active,
-.btn:active,
-.theme-btn:active{
+.btn:active{
 transform:scale(0.95);
-box-shadow:0 5px 15px rgba(0,0,0,0.15);
 }
 
 /* ================= FOOTER ================= */
@@ -362,7 +343,7 @@ width:280px;
 }
 
 nav ul{
-gap:12px;
+gap:14px;
 }
 
 nav a{
@@ -370,14 +351,14 @@ font-size:12px;
 }
 }
 
-/* ================= DARK MODE ================= */
+/* ================= DARK MODE FIX TOTAL ================= */
 body.dark{
-background:#0f0f0f;
+background:#0e0e0e;
 color:#fff;
 }
 
 body.dark nav{
-background:rgba(20,20,20,0.9);
+background:rgba(20,20,20,0.95);
 border-bottom:1px solid rgba(255,255,255,0.1);
 }
 
@@ -397,7 +378,6 @@ border:1px solid rgba(255,255,255,0.1);
 body.dark .skill-tags span{
 background:#1a1a1a;
 color:#fff;
-border:1px solid rgba(255,255,255,0.1);
 }
 
 body.dark .skill-tags span:hover{
